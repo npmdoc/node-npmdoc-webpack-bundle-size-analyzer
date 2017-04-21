@@ -1,0 +1,314 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="http://github.com/robertknight/webpack-bundle-size-analyzer"
+
+    >webpack-bundle-size-analyzer (v2.6.0)</a>
+</h1>
+<h4>A utility to find how your dependencies are contributing to the size of your Webpack bundles</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-bundle-size-analyzer">module webpack-bundle-size-analyzer</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>WebpackBundleSizeAnalyzerPlugin
+            <span class="apidocSignatureSpan">(filepath, statsOptions)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.dependencySizeTree">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>dependencySizeTree
+            <span class="apidocSignatureSpan">(stats)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.isMultiCompilation">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>isMultiCompilation
+            <span class="apidocSignatureSpan">(stats)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.printDependencySizeTree">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>printDependencySizeTree
+            <span class="apidocSignatureSpan">(node, shareStats, depth, outputFn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>WebpackBundleSizeAnalyzerPlugin.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin">module webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.WebpackBundleSizeAnalyzerPlugin">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>WebpackBundleSizeAnalyzerPlugin
+            <span class="apidocSignatureSpan">(filepath, statsOptions)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype">module webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype.apply">
+            function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype.</span>apply
+            <span class="apidocSignatureSpan">(compiler)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webpack-bundle-size-analyzer" id="apidoc.module.webpack-bundle-size-analyzer">module webpack-bundle-size-analyzer</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin" id="apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>WebpackBundleSizeAnalyzerPlugin
+        <span class="apidocSignatureSpan">(filepath, statsOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebpackBundleSizeAnalyzerPlugin(filepath, statsOptions) {
+    if (filepath === void 0) { filepath = &#x27;&#x27;; }
+    if (statsOptions === void 0) { statsOptions = {}; }
+    this.filepath = filepath;
+    this.statsOptions = statsOptions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.dependencySizeTree" id="apidoc.element.webpack-bundle-size-analyzer.dependencySizeTree">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>dependencySizeTree
+        <span class="apidocSignatureSpan">(stats)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function dependencySizeTree(stats) {
+    if (webpack_stats.isMultiCompilation(stats)) {
+        return stats.children.map(bundleSizeTree);
+    }
+    else {
+        return [bundleSizeTree(stats)];
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.isMultiCompilation" id="apidoc.element.webpack-bundle-size-analyzer.isMultiCompilation">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>isMultiCompilation
+        <span class="apidocSignatureSpan">(stats)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function isMultiCompilation(stats) {
+    return !stats.hasOwnProperty(&#x27;modules&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.printDependencySizeTree" id="apidoc.element.webpack-bundle-size-analyzer.printDependencySizeTree">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>printDependencySizeTree
+        <span class="apidocSignatureSpan">(node, shareStats, depth, outputFn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function printDependencySizeTree(node, shareStats, depth, outputFn) {
+    if (depth === void 0) { depth = 0; }
+    if (outputFn === void 0) { outputFn = console.log; }
+    if (node.hasOwnProperty(&#x27;bundleName&#x27;)) {
+        var rootNode = node;
+        outputFn(&#x22;Bundle: &#x22; + rootNode.bundleName);
+    }
+    var childrenBySize = node.children.sort(function (a, b) {
+        return b.size - a.size;
+    });
+    var totalSize = node.size;
+    var remainder = totalSize;
+    var includedCount = 0;
+    var prefix = &#x27;&#x27;;
+    for (var i = 0; i &#x3c; depth; i++) {
+        prefix += &#x27;  &#x27;;
+    }
+    for (var _i = 0, childrenBySize_1 = childrenBySize; _i &#x3c; childrenBySize_1.length; _i++) {
+        var child = childrenBySize_1[_i];
+        ++includedCount;
+        var out = &#x22;&#x22; + prefix + child.packageName + &#x22;: &#x22; + filesize(child.size);
+        if (shareStats) {
+            var percentage = ((child.size / totalSize) * 100).toPrecision(3);
+            out = out + &#x22; (&#x22; + percentage + &#x22;%)&#x22;;
+        }
+        outputFn(out);
+        printDependencySizeTree(child, shareStats, depth + 1, outputFn);
+        remainder -= child.size;
+        if (remainder &#x3c; 0.01 * totalSize) {
+            break;
+        }
+    }
+    if (depth === 0 || remainder !== totalSize) {
+        var out = prefix + &#x22;&#x3c;self&#x3e;: &#x22; + filesize(remainder);
+        if (shareStats) {
+            var percentage = ((remainder / totalSize) * 100).toPrecision(3);
+            out = out + &#x22; (&#x22; + percentage + &#x22;%)&#x22;;
+        }
+        outputFn(out);
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin" id="apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin">module webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.WebpackBundleSizeAnalyzerPlugin" id="apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.WebpackBundleSizeAnalyzerPlugin">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.</span>WebpackBundleSizeAnalyzerPlugin
+        <span class="apidocSignatureSpan">(filepath, statsOptions)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function WebpackBundleSizeAnalyzerPlugin(filepath, statsOptions) {
+    if (filepath === void 0) { filepath = &#x27;&#x27;; }
+    if (statsOptions === void 0) { statsOptions = {}; }
+    this.filepath = filepath;
+    this.statsOptions = statsOptions;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype" id="apidoc.module.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype">module webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype.apply" id="apidoc.element.webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype.apply">
+        function <span class="apidocSignatureSpan">webpack-bundle-size-analyzer.WebpackBundleSizeAnalyzerPlugin.prototype.</span>apply
+        <span class="apidocSignatureSpan">(compiler)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">apply = function (compiler) {
+    var _this = this;
+    compiler.plugin(&#x27;done&#x27;, function (stats) {
+        var filepath = _this.filepath;
+        if (filepath.length &#x3e; 0) {
+            stats = stats.toJson(_this.statsOptions);
+            if (!path.isAbsolute(filepath)) {
+                filepath = path.resolve(compiler.outputPath, filepath);
+            }
+            var depTrees = sizeTree.dependencySizeTree(stats);
+            var output_1 = &#x27;&#x27;;
+            depTrees.forEach(function (tree) {
+                return sizeTree.printDependencySizeTree(tree, true, 0, function (out) {
+                    output_1 += out + &#x22;\n&#x22;;
+                });
+            });
+            fs.writeFile(filepath, output_1, &#x27;utf8&#x27;, function () { });
+        }
+    });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
